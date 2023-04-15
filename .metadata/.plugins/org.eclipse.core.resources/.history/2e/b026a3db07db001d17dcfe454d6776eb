@@ -1,0 +1,79 @@
+package Project1.Project1;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class View {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver = new ChromeDriver(); 
+		driver.get("http://automationexercise.com");
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		
+        WebElement ViewSignUp = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a")); //signup module starts here
+		ViewSignUp.click();
+		/*
+	    driver.findElement(By.name("name")).sendKeys("Rozina Akter Ranu");
+	    driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("ranu.maisha18@gmail.com");
+	    driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/button")).submit();
+	    driver.findElement(By.id("id_gender2")).click();
+	    driver.findElement(By.id("password")).sendKeys("ranu.maisha18@gmail.com");
+	    
+	    Select dropdown = new Select(driver.findElement(By.id("days")));
+	    dropdown.selectByVisibleText("18");
+	    Select dropdown2 = new Select(driver.findElement(By.id("months")));
+	    dropdown2.selectByVisibleText("March");
+	    Select dropdown3 = new Select(driver.findElement(By.id("years")));
+	    dropdown3.selectByVisibleText("1952");
+
+	    driver.findElement(By.xpath("//*[@id=\"newsletter\"]")).click();
+	    driver.findElement(By.id("first_name")).sendKeys("Rozina");
+	    driver.findElement(By.id("last_name")).sendKeys("Ranu");
+	    driver.findElement(By.id("company")).sendKeys("TestCompany");
+	    driver.findElement(By.id("address1")).sendKeys("Bashundhara");
+	
+	    Select dropdown4 = new Select(driver.findElement(By.id("country")));
+	    dropdown4.selectByVisibleText("Canada");
+	    driver.findElement(By.id("state")).sendKeys("Test");
+	    driver.findElement(By.id("city")).sendKeys("Test");
+	    driver.findElement(By.id("zipcode")).sendKeys("1234");
+	    driver.findElement(By.id("mobile_number")).sendKeys("01628014354");
+	    
+	    driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div/div[1]/form/button")).submit();
+	    driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div/div/a")).click();   //signup module ends here
+	    driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[3]/a")).click();  //view cart page 
+		driver.findElement(By.linkText("Proceed To Checkout")).click();  //proceed to checkout 
+		
+		//driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[2]/a")).click(); // product page 
+	     driver.findElement(By.xpath("/html/body/section[2]/div[1]/div/div[2]/div[1]/div[10]/div/div[1]/div[2]/div/a")).click(); //add products to cart
+	     */
+	     driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/input[2]")).sendKeys("ranu.maisha18@gmail.com");  //Login start 
+	     driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/input[3]")).sendKeys("ranu.maisha18@gmail.com");
+	     driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/button")).submit(); //Login finishes here 
+	     
+	  
+	   
+	    
+	 
+	    
+	    
+		 
+	         
+	
+	}
+}
+
+		
+		
+
+
+	
+
+	

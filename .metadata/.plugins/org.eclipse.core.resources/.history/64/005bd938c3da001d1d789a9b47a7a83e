@@ -1,0 +1,52 @@
+package Project1.Project1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class View {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver = new ChromeDriver(); 
+		driver.get("http://automationexercise.com");
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		
+        //WebElement AddToCart = driver.findElement(By.xpath("//input[@id=\"btn btn-default add-to-cart\"]"));
+		//AddToCart.click();
+		
+		//driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[3]/a")).click();  //view cart page 
+		//driver.findElement(By.linkText("Proceed To Checkout")).click();  //proceed to checkout 
+		//driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[2]/a")).click(); //view product 
+		WebElement ViewSignUp = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a"));
+		ViewSignUp.click();
+	    driver.findElement(By.name("name")).sendKeys("Rozina Akter Ranu");
+	    driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("ranu.maisha18@gmail.com");
+	    driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/button")).submit();
+	    driver.findElement(By.id("id_gender2")).click();
+	    driver.findElement(By.id("password")).sendKeys("ranu.maisha18@gmail.com");
+	    
+	    Select dropdown = new Select(driver.findElement(By.id("days,months,years")));
+	    dropdown.selectByVisibleText("18,March,1952");
+	    
+	
+	    
+	    
+	    
+	    
+		 
+	         
+	
+	}
+}
+
+		
+		
+
+
+	
+
+	
